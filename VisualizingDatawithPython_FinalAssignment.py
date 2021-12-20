@@ -215,7 +215,3 @@ def get_graph(chart, year, children1, children2, c3, c4, c5):
 # Run the app
 if __name__ == '__main__':
     app.run_server()
-    
-    
-#Please view the output of this file here: https://vivianlin988-8050.theiadocker-0-labs-prod-theiak8s-3-tor01.proxy.cognitiveclass.ai/
-#Thank you!
