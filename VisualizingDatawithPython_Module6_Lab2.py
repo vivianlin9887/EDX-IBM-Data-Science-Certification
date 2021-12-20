@@ -31,7 +31,6 @@ app.layout = html.Div(children=[html.H1('Airline Dashboard',
                                 style={'textAlign': 'center', 'color': '#F57241'}
                                 ),
                                 dcc.Graph(figure=fig),
-
                     ])
 
 # Run the application                   
