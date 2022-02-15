@@ -17,7 +17,7 @@ app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
                                                'font-size': 40}
                                         ),
                                 # Task 1:
-                                html.Div(dcc.Dropdown(id='site-dropdown',
+                                html.Div([dcc.Dropdown(id='site-dropdown',
                                                       options=[
                                                        {'label': 'All Sites', 'value': 'ALL'},
                                                        {'label': 'CCAFS LC-40', 'value': 'CCAFS LC-40'},
@@ -27,10 +27,9 @@ app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
                                                       value='ALL',
                                                       placeholder="Select a Launch Site here",
                                                       searchable=True
-                                                   )),
-                                html.Br(),
-                                # Task 2
-                                html.Div(dcc.Graph(id='success-pie-chart')),
+                                                        ),
+                                          html.Div(dcc.Graph(id='success-pie-chart'))
+                                          ]),
                                 html.Br(),
                                 # Task 3: Add Range Slider
                                 html.Div([html.Label("Payload range (Kg):"),
