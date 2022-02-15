@@ -1,11 +1,11 @@
 import dash
-import html as html
 import pandas as pd
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.express as px
-import plotly.graph_objects as go
 from dash.dependencies import Input, Output
+# import plotly.graph_objects as go
+
 
 spacex_df = pd.read_csv(
     "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DS0321EN-SkillsNetwork/datasets/spacex_launch_dash.csv")
@@ -18,16 +18,15 @@ app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
                                         ),
                                 # Task 1:
                                 html.Div([dcc.Dropdown(id='site-dropdown',
-                                                      options=[
+                                                       options=[
                                                        {'label': 'All Sites', 'value': 'ALL'},
                                                        {'label': 'CCAFS LC-40', 'value': 'CCAFS LC-40'},
                                                        {'label': 'VAFB SLC-4E', 'value': 'VAFB SLC-4E'},
                                                        {'label': 'KSC LC-39A', 'value': 'KSC LC-39A'},
                                                        {'label': 'CCAFS SLC-40', 'value': 'CCAFS SLC-40'}],
-                                                      value='ALL',
-                                                      placeholder="Select a Launch Site here",
-                                                      searchable=True
-                                                        ),
+                                                       value='ALL',
+                                                       placeholder="Select a Launch Site here",
+                                                       searchable=True),
                                           html.Div(dcc.Graph(id='success-pie-chart'))
                                           ]),
                                 html.Br(),
